@@ -1,62 +1,46 @@
 import sys
-print('-' * 20)
-print('MENU')
-print('-' * 20)
-print()
-print('OPÇÕES', )
-print('[1], - COMPRAS')
-print('[2], - VENDAS')
-print('[3], - SALDO')
-print('[4], - SAIR')
 # menu principal
-def main(compra, venda):
- while True:
-  resposta1 = int(input(" Selecione sua opção:" ))
-  if resposta1 ==1:
-   main(compra)
-  elif resposta1 ==2:
-   main(venda)
-  elif resposta1 ==3:
-   saldo()
-  elif resposta1 ==4:
-   print('saindo do programa')
-   sys.exit()
-
-#definindo variaveis
-compra = str
-venda = str
-#menu de transações
 def main():
- print('-' * 20)
- print('MENU')
- print('-' * 20)
- print()
- print('OPÇÕES', )
- print('[1], - NOME')
- print('[2], - QUANTIDADE')
- print('[3], - VALOR')
- print('[4], - SAIR')
-resposta = input("insira  a sua opção")
-if main() == compra:
- nome = input(f'nome do produto {main()}:')
- preço = input(f'preço do produto {main()}:')
- quantidade = input(f"quantidade do produto {main()}")
- compra.append((nome, preço , quantidade))
-if main() == venda:
- nome = input(f'nome do produto {main()}:')
- preço = input(f'preço do produto {main()}:')
- quantidade = input(f"quantidade do produto {main()}")
- venda.append((nome, preço, quantidade))
+ while True:
+  print('-' * 20)
+  print('MENU')
+  print('-' * 20)
+  print()
+  print('OPÇÕES', )
+  print('[C]', - 'COMPRA')
+  print('[V]', - 'VENDA')
+  print('[S]', - 'SAIR')
+resposta = input(" Selecione sua opção:" )
+if resposta =="c":
+ transacao("compra")
+elif resposta =="v":
+ transacao("venda")
+elif resposta =="s":
+ print('saindo do programa')
+ sys.exit()
 
+#menu de transações
+def transacao(tipo):
+  lista = [{"nome:", nome, "quantidade:", quantidade, "preço:", preco}]
+   dados.append(lista)
 
-# criando listas
-venda = []
-compra = []
-
+ if tipo == "compra":
+  nome = input(f'nome do produto de {tipo}:')
+  preco = input(f'preço do produto de {tipo}:')
+  quantidade = input(f"quantidade do produto de {tipo}")
+  lista.append((tipo, nome, preço , quantidade))
+ if tipo == "venda":
+  nome = input(f'nome do produto de {tipo}:')
+  preco = input(f'preço do produto de {tipo}:')
+  quantidade = input(f"quantidade do produto de {tipo}")
+  lista.append((tipo, nome, preco, quantidade))
+  print("o saldo total é", total("venda") - total("compra"))
+  
 
 #saldo
-total = preço(main()) * quantidade(main())
-
-
-def saldo():
- print("o saldo total é", total(compra) - total(venda))
+def total(tipo):
+  dados = []
+ if tipo == "compra":
+  preco * quantidade
+ elif tipo == "venda":
+  preco * quantidade
